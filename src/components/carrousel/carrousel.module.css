@@ -1,0 +1,27 @@
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLeft, .imgRigth {
+    width: 200px;
+}
+.imgCenter{
+    width: 300px;
+}
+
+@keyframes slideToLeft {
+    0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(100%);
+      }
+}
+
+.slideEffect {
+
+    animation: slideToLeft 4s;
+    transition: 4s width;
+}
