@@ -2,26 +2,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 600px;
 }
 
-.imgLeft, .imgRigth {
-    width: 200px;
-}
-.imgCenter{
-    width: 300px;
+.carrousel{
+    display: flex;
 }
 
-@keyframes slideToLeft {
-    0%, 100% {
-        transform: translateX(0);
-      }
-      50% {
-        transform: translateX(100%);
-      }
+.container{
+    z-index: 1;
+    img{
+        scale: 1.4;
+    }
+    h3{
+        backdrop-filter: blur(25px);
+        width: 350px;
+        height: 80px;
+        scale: 1.4;
+        text-align: center;
+    }
+    
 }
 
-.slideEffect {
+.containerL{
+    z-index: 0;
+    img{
+        scale: 1;
+    }
+    h3{
+        backdrop-filter: blur(25px);
+        position: absolute;
+        width: 350px;
+        height: 40px;
+        scale: 0.8;
+        text-align: center;
+    }
+}
 
-    animation: slideToLeft 4s;
-    transition: 4s width;
+.imgLeft, .imgRigth, .imgCenter {
+    max-width:350px;
+    height: 230px;
 }
